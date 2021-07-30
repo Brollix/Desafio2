@@ -19,10 +19,17 @@ alert(
 	'De todas maneras, Hola, yo soy "BullyingBot", en la proxima ventana ingresa tu nombre.'
 );
 
-const inputUsuario = prompt('Ingresa tu nombre:');
-alert(
-	'Hola ' + inputUsuario + ', tu nombre es tipico de alguien que no se baña.'
-);
+let inputUsuario = prompt('Ingresa tu nombre:');
+if (inputUsuario != null) {
+	alert(
+		'Hola ' +
+			inputUsuario +
+			', tu nombre es tipico de alguien que no se baña.'
+	);
+} else {
+	inputUsuario = prompt('Daale, no seas mala onda, decime tu nombre:');
+}
+
 alert(
 	'Te voy a hacer ' +
 		totalPreguntas +
@@ -40,7 +47,7 @@ const respuestaPrimeraPregunta = prompt(
 );
 
 if (respuestaPrimeraPregunta !== 'blanco') {
-	alert('Estas un poco distraído amigo, tomate un feca.');
+	alert('Estas un poco distraido amigo, tomate un cafesito.');
 } else if (respuestaPrimeraPregunta == 'blanco') {
 	counter += 1;
 	console.log('Respuestas correctas: ' + counter + ' de ' + totalPreguntas);
@@ -63,7 +70,7 @@ if (respuestaSegundaPregunta != 9) {
 }
 
 alert('Ultima pregunta, estas preparado?');
-console.log('La respuesta es: "~144 millones", pero en numeros!');
+console.log('La respuesta es: "144 millones", pero en numeros!');
 const respuestaTerceraPregunta = prompt(
 	'Cual es la distancia desde la tierra al sol en kilometros?, te dejo responder con un error del 30%'
 );

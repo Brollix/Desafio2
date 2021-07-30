@@ -1,11 +1,11 @@
-:root{
-    --color-fondo: #1e1e20;
+/*
+   --color-fondo: #1e1e20;
     --color-bloque:#8b4540;
     --color-texto: #f1cb93;
-}
+*/
 
 body{
-    background-color: #1e1e20;
+    background: #1e1e20;
 }
 
 .title{
@@ -13,5 +13,5 @@ body{
 }
 
 .blanco{
-
+    margin: auto;
 }

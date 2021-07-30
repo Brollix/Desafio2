@@ -4,7 +4,6 @@
  ingresados y las condiciones cumplidas. 
  Archivo HTML y Archivo JS, referenciado en el HTML por etiqueta <script src="js/miarchivo.js"></script>, que incluya la definición de un algoritmo en JavaScript que emplee instrucciones condicionales.*/
 
-
 let counter = 0;
 const distanciaAlSol = 145000000;
 const totalPreguntas = 3;

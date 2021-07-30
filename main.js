@@ -5,8 +5,9 @@
  Archivo HTML y Archivo JS, referenciado en el HTML por etiqueta <script src="js/miarchivo.js"></script>, que incluya la definición de un algoritmo en JavaScript que emplee instrucciones condicionales.*/
 
 let counter = 0;
-const distanciaAlSol = 145000000;
+const distanciaAlSol = 144000000;
 const totalPreguntas = 3;
+const errorPermitido = 30;
 
 alert(
 	'La Consola oculta, si logras con ella interactuar, grandes misterios revelará.'
@@ -62,21 +63,22 @@ if (respuestaSegundaPregunta != 9) {
 }
 
 alert('Ultima pregunta, estas preparado?');
-console.log('La respuesta es: "~145 millones", pero en numeros!');
+console.log('La respuesta es: "~144 millones", pero en numeros!');
 const respuestaTerceraPregunta = prompt(
-	'Cual es la distancia desde la tierra al sol en kilometros?, te dejo responder con un error del 10%'
+	'Cual es la distancia desde la tierra al sol en kilometros?, te dejo responder con un error del 30%'
 );
 
 if (
-	respuestaTerceraPregunta < 145000000 ||
-	respuestaTerceraPregunta > 145000000
+	respuestaTerceraPregunta < distanciaAlSol ||
+	respuestaTerceraPregunta > distanciaAlSol
 ) {
 	alert('JAJAJA, Incorrecto, ni yo sabia eso.');
 	alert('Respuestas correctas: ' + counter + '/' + totalPreguntas);
 } else if (
-	respuestaTerceraPregunta >= distanciaAlSol * 0.9 ||
-	respuestaTerceraPregunta <= distanciaAlSol * 1.1
+	respuestaTerceraPregunta >= distanciaAlSol * (1 - errorPermitido / 100) || //multiplica por 0.7 (70%)
+	respuestaTerceraPregunta <= distanciaAlSol * (1 + errorPermitido / 100)
 ) {
+	//multiplica por 1.3 (130%)
 	counter += 1;
 	console.log('Respuestas correctas: ' + counter + ' de ' + totalPreguntas);
 	alert(

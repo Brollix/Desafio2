@@ -71,12 +71,8 @@ if (
 	respuestaTerceraPregunta < 145000000 ||
 	respuestaTerceraPregunta > 145000000
 ) {
-	alert(
-		'JAJAJA Ni yo sabia esa. Respondiste corectamente: ' +
-			counter +
-			' de ' +
-			totalPreguntas
-	);
+	alert('JAJAJA, Incorrecto, ni yo sabia eso.');
+	alert('Respuestas correctas: ' + counter + '/' + totalPreguntas);
 } else if (
 	respuestaTerceraPregunta >= distanciaAlSol * 0.9 ||
 	respuestaTerceraPregunta <= distanciaAlSol * 1.1

@@ -1,17 +1,54 @@
-/*
-   --color-fondo: #1e1e20;
-    --color-bloque:#8b4540;
-    --color-texto: #f1cb93;
-*/
+:root{
+    --color-fondo:          #1e1e20;
+    --color-fondo-titulo:   #dc9642;
+    --color-titulo:         #be6b3f;
+    --color-bloque:         #8b4540;
+    --color-texto:          #f1cb93;
+}   
 
 body{
-    background-color: #1e1e20;
+    background: var(--color-fondo);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    scroll-behavior: smooth;
 }
 
 .title{
     text-align: center;
+    color: var(--color-titulo);
+    margin: auto;
+    max-width: 50%; 
+    background: var(--color-fondo-titulo);
+    border-radius: 1rem;   
+    padding:2vh;    
 }
 
 .blanco{
-    margin: auto;
+    color: var(--color-texto);
+    text-align: left;
+    margin: 1.5rem;
+    padding-inline: 5rem;
+    background: var(--color-bloque);
+    padding: 2rem;
+    border-radius: 1rem;
+}
+
+.nueve {
+    color: var(--color-texto);
+    
+    text-align: left;
+    margin: 1.5rem;
+    padding-inline: 5rem;
+    background: var(--color-bloque);
+    padding: 2rem;
+    border-radius: 1rem;
+}
+
+.sol{
+    color: var(--color-texto);
+    text-align: left;
+    margin: 1.5rem;
+    padding-inline: 5rem;
+    background: var(--color-bloque);
+    padding: 2rem;
+    border-radius: 1rem;
 }

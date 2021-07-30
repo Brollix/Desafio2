@@ -69,16 +69,9 @@ const respuestaTerceraPregunta = prompt(
 );
 
 if (
-	respuestaTerceraPregunta < distanciaAlSol ||
-	respuestaTerceraPregunta > distanciaAlSol
-) {
-	alert('JAJAJA, Incorrecto, ni yo sabia eso.');
-	alert('Respuestas correctas: ' + counter + '/' + totalPreguntas);
-} else if (
 	respuestaTerceraPregunta >= distanciaAlSol * (1 - errorPermitido / 100) || //multiplica por 0.7 (70%)
-	respuestaTerceraPregunta <= distanciaAlSol * (1 + errorPermitido / 100)
+	respuestaTerceraPregunta <= distanciaAlSol * (1 + errorPermitido / 100) //multiplica por 1.3 (130%)
 ) {
-	//multiplica por 1.3 (130%)
 	counter += 1;
 	console.log('Respuestas correctas: ' + counter + ' de ' + totalPreguntas);
 	alert(
@@ -87,6 +80,9 @@ if (
 			' de ' +
 			totalPreguntas
 	);
+} else {
+	alert('JAJAJA, Incorrecto, ni yo sabia eso.');
+	alert('Respuestas correctas: ' + counter + '/' + totalPreguntas);
 }
 
 if (counter == totalPreguntas) {
